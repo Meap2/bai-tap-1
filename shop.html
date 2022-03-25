@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- NAVBAR -->
+        <div id="navbar">
+           <a href="home.html">Home</a>
+           <a href="gallery.html">Gallery</a>
+           <a href="#">Shop</a>
+           <a href="#">More</a>
+           <a href="#">Info</a>
+           <a href="#">Contact</a>
+           <input type="text" id="search-btn" placeholder="Search...">
+        </div>
+
+        <h2>Order details</h2>
+
+        <!-- FIRST FORM -->
+        <h3>Lorem, ipsum.</h3>
+        <div class="form">
+            <div class="input_form">
+                <label>Lorem</label>
+                <div class="select_list">
+                    <div class="custom">
+                       <select>
+                           <option value="1">Lorem</option>
+                           <option value="2">Excepturi</option>
+                           <option value="3">Similique</option>
+                       </select>
+                    </div>  
+                </div>
+            </div>
+            <div class="input_form">
+                <label>Iusto</label> 
+                <input type="text">
+            </div>
+            <div class="input_form">
+                <label>Maxim</label> 
+                <input type="text">
+            </div>
+            <div class="input_form">
+                <label>Phone</label>
+                <input type="text" pattern="^[0-9]{10}$">
+            </div>
+            <div class="input_form">
+               <label>Consectet</label>
+               <input type="text">
+            </div>
+        </div>
+      
+        <!-- SECOND FORM -->
+        <h3>Lorem</h3>
+        <div class="form">
+            <div class="input_form">
+                <label for="">Lorem</label>
+                <div class="select_list">
+                    <div class="custom">
+                       <select>
+                           <option value="1">Lorem</option>
+                           <option value="2">Excepturi</option>
+                           <option value="3">Similique</option>
+                       </select>
+                    </div>  
+                </div>
+            </div>
+            <div class="input_form">
+                <label for="">Tempora</label>
+                <input type="text" required>
+            </div>
+            <div class="input_form">
+                <label for="">Soluta</label>
+                <input type="text" required>
+            </div>
+        </div>
+
+        <!-- THIRD FORM -->
+        <h3>Lorem, ipsum</h3>
+        <div class="form">
+            <div class="input_form">
+                <label for="">Lorem ipsum</label>
+                <input type="text">
+            </div>
+            <div class="input_form">
+                <label for="">Lorem ipsum</label>
+                <input type="text">
+            </div>
+            <button id="modal_open">Open</button>
+        </div>
+
+        <!-- BUTTON -->
+        <div class="btns">
+            <button>Lorem</button>
+            <button>Impedit</button>
+        </div>
+        
+        <!-- FOOTER -->
+        <div id="footer">
+            <p>
+                Copyright © 
+                <a href="https://mail.google.com/">abc@gmail.com</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal">
+        <div class="modal_container">
+            <textarea cols="20" rows="10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt sequi excepturi tenetur voluptate deserunt voluptatibus. Optio, neque, eum pariatur minima dolor ducimus reiciendis, deserunt aperiam ut veritatis necessitatibus et nisi doloribus fugit fuga sit itaque placeat nihil ad eaque eos labore. Facilis debitis rem necessitatibus provident consequatur, recusandae omnis ullam.</textarea>
+            <button id="modal_close">Cancel</button>
+            <button>Voluptatibus</button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const btnOpen = document.querySelector('#modal_open')
+        const modal = document.querySelector('.modal')
+        const btnClose = document.querySelector('#modal_close')
+
+        function showModal() {
+            modal.classList.add('open')
+        }
+
+        function closeModal() {
+            modal.classList.remove('open')
+        }
+
+        btnOpen.addEventListener('click', showModal)
+        btnClose.addEventListener('click', closeModal)
+
+    </script>
+
+</body>
+</html>

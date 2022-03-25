@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- NAVBAR -->
+        <div id="navbar">
+           <a href="home.html">Home</a>
+           <a href="#">Gallery</a>
+           <a href="shop.html">Shop</a>
+           <a href="#">More</a>
+           <a href="#">Info</a>
+           <a href="#">Contact</a>
+           <input type="text" id="search-btn" placeholder="Search...">
+        </div>
+
+        <!-- SLIDER -->
+        <div id="img-slide">
+            <div id="slide" class="active">
+                <img src="./asset/1.jpg" alt="">
+                <div id="info">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, eos.</p>
+                </div>
+            </div>
+            <div id="slide">
+                <img src="./asset/2.jpg" alt="">
+                <div id="info">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, quos.</p>
+                </div>
+            </div>
+            <div id="slide">
+                <img src="./asset/3.jpg" alt="">
+                <div id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, placeat?</p>
+                </div>
+            </div>
+            <div id="slide">
+                <img src="./asset/4.jpg" alt="">
+                <div id="info">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, placeat?</p>
+                </div>
+            </div>
+            <!-- ARROW NAVIGATION -->
+            <a class="pre" onclick="">.</a>
+            <a class="next" onclick="">.</a>
+            
+            <!-- BUTTON NAVIGATION -->
+            <div id="navigation">
+                <div id="btn" class="active"></div>
+                <div id="btn"></div>
+                <div id="btn"></div>
+                <div id="btn"></div>
+            </div>
+        </div>
+
+        <!-- MUSIC -->
+        <audio controls>
+            <source src="http://www.web-source.net/wonderfultonight.mp3" type="audio/mpeg">
+            Your browser does not support t111111111he audio tag.
+        </audio>
+        
+        <!-- CONTENT -->
+        <div id="content">
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, libero. </h3>
+                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio iste rem dolorem, labore nobis illo quo possimus fuga eligendi dolor dicta beatae, reprehenderit totam, nihil quibusdam commodi molestiae delectus consequatur error? Libero, praesentium obcaecati. Molestiae veniam facilis quasi tempore. Autem quaerat laborum modi sint culpa rem natus, quam dolor consequuntur?</p>
+            
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, repudiandae. </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, quas! Tenetur, consequuntur. Nemo laboriosam illo reprehenderit repellat iste minima adipisci vel pariatur culpa magni odit natus aliquid reiciendis dolorem consequuntur cupiditate in, odio itaque veritatis temporibus at officiis a. Dignissimos possimus rerum accusamus nemo at veniam, amet, ad reprehenderit fuga odit qui magni autem rem libero quidem voluptate earum optio!</p>
+            
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, dicta. </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, perspiciatis! Facere, voluptatibus reprehenderit iste assumenda maxime corrupti quam hic earum minus pariatur et, quos placeat deserunt quod. Aspernatur odit mollitia ducimus repellendus praesentium molestiae, delectus velit maxime vitae debitis vel facere voluptates facilis maiores. Non ducimus cum aliquam possimus aliquid vel aut voluptatibus! Ullam quam harum modi, quia tenetur dolor.</p>
+            
+        </div>
+
+        <!-- FOOTER -->
+        <div id="footer">
+            <p>
+                Copyright © 
+                <a href="https://mail.google.com/">abc@gmail.com</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        var slides = document.querySelectorAll('#slide')
+        var btns = document.querySelectorAll('#btn')
+        let currenSlide = 1
+
+        var manualNav = function(manual) {
+            slides.forEach((slide) => {
+                slide.classList.remove('active')
+
+                btns.forEach((btn) => {
+                    btn.classList.remove('active')
+                })
+            })
+
+            slides[manual].classList.add('active')
+            btns[manual].classList.add('active')
+
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+                manualNav(i)
+                currenSlide = i
+            })
+        })
+    </script>
+</body>
+</html>

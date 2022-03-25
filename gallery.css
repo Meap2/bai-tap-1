@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    margin: 0 20%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+#navbar {
+    height: 40px;
+    background-color: antiquewhite;
+}
+
+#navbar a {
+    display: inline-block;
+    line-height: 40px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: rgba(124, 106, 27, 0.836);
+    font-size: 15px;
+}
+
+#navbar a:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+#navbar #search-btn {
+    float: right;
+    margin: 6px 70px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+#img-slide {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+#img-slide #slide {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    /* clip-path: circle(0% at 0 50%); */
+    visibility: hidden;
+}
+
+#img-slide #slide img {
+    z-index: 1;
+    width: 600px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+#img-slide #slide #info {
+    position: absolute;
+    top: 4%;
+    margin-left: 30%;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 15px 30px;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    color: #ddd;
+}
+
+#img-slide #navigation {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#img-slide #navigation #btn {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* ACTIVE PART IN NAVIGATION */
+#img-slide #slide.active {
+    /* clip-path: circle(150% at 0 50%); */
+    /* transition: 2s; */
+    visibility: visible;
+}
+/* END ACTIVE PART */
+
+audio {
+    margin-top: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+#content {
+    display: justify;
+    padding: 20px 20px;
+}
+
+#content h3 {
+    margin-bottom: 10px;
+}
+
+#content p {
+    margin-bottom: 10px;
+}
+
+#footer {
+    background-color: rgb(116, 117, 108);
+    line-height: 30px;
+    padding-left: 40px;
+}
+
+#footer a {
+    color: #000;
+}
